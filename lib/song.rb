@@ -1,5 +1,5 @@
 class Song
-  attr_accessor :name
+  attr_accessor :name, :artist
   @@all = []
 
   def initialize(name)
@@ -11,7 +11,7 @@ class Song
     @@all
   end
 
-  def artist_name=(artist_name)
+  def artist=(artist_name)
     Artist.all.select do |artist|
       if artist.name == artist_name
         self.artist = artist
