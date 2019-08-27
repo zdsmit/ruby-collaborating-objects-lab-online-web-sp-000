@@ -24,14 +24,11 @@ class Artist
   end
 
   def find_or_create_by_name(artist_name)
-    @@all.select do |artist|
-      if artist.name == artist_name
-        artist
-      else
-        new_artist = Artist.new(artist_name)
-        new_artist
-      end
-    end
+    if @@all.include?(artist_name)
+      artist_name
+    else
+      new_artist = Artist.new
+      new_artist
   end
 
   def print_songs
