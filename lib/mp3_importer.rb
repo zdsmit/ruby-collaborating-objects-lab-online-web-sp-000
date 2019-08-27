@@ -1,5 +1,4 @@
 class MP3Importer
-  require_relative path
   attr_accessor :path
 
   def initialize(path)
