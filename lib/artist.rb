@@ -27,6 +27,9 @@ class Artist
     self.all.find(artist_name) ? self.find(artist_name) : self.new(artist_name)
   end
 
+  def self.find(artist_name)
+    self.all.find {|artist| artist.name == artist_name}
+
   def print_songs
   end
 
