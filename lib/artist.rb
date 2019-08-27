@@ -4,6 +4,9 @@ class Artist
 
   def initialize(name)
     @name = name
+  end
+
+  def save
     @@all << self
   end
 
@@ -16,7 +19,7 @@ class Artist
   end
 
   def songs
-    Song.all.select {|song|song if song.artist = self}
+    Song.all.select {|song|song if song.artist == self}
   end
 
   def find_or_create_by_name
