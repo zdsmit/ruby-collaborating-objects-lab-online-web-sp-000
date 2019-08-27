@@ -15,10 +15,6 @@ class Song
     @@all
   end
 
-  def artist=(artist)
-    artist = self.artist
-  end
-
   def new_by_filename
   end
 
